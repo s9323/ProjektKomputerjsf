@@ -16,45 +16,45 @@ import javax.faces.validator.ValidatorException;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.example.jsfdemo.domain.Person;
-import com.example.jsfdemo.service.PersonManager;
+import com.example.jsfdemo.domain.Client;
+import com.example.jsfdemo.service.ClientManager;
 
 @SessionScoped
-@Named("personBean")
+@Named("ClientBean")
 public class PersonFormBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private Person person = new Person();
+	private Client client = new Client();
 
-	private ListDataModel<Person> persons = new ListDataModel<Person>();
+	private ListDataModel<Client> clients = new ListDataModel<Client>();
 
 	@Inject
-	private PersonManager pm;
+	private ClientManager cm;
 
-	public Person getPerson() {
-		return person;
+	public Client getClient() {
+		return client;
 	}
 
-	public void setPerson(Person person) {
-		this.person = person;
+	public void setClient(Client client) {
+		this.client = client;
 	}
 
-	public ListDataModel<Person> getAllPersons() {
-		persons.setWrappedData(pm.getAllPersons());
-		return persons;
+	public ListDataModel<Client> getAllClients() {
+		clients.setWrappedData(cm.getAllClients());
+		return clients;
 	}
 
 	// Actions
-	public String addPerson() {
-		pm.addPerson(person);
-		return "showPersons";
+	public String addClient() {
+		cm.addClient(client);
+		return "showClients";
 		//return null;
 	}
 
-	public String deletePerson() {
-		Person personToDelete = persons.getRowData();
-		pm.deletePerson(personToDelete);
+	public String deleteClient() {
+		Client clientToDelete = clients.getRowData();
+		cm.deleteClient(clientToDelete);
 		return null;
 	}
 
@@ -66,8 +66,8 @@ public class PersonFormBean implements Serializable {
 
 		String pin = (String) value;
 
-		for (Person person : pm.getAllPersons()) {
-			if (person.getPin().equalsIgnoreCase(pin)) {
+		for (Client client : cm.getAllClients()) {
+			if (client.getPin().equalsIgnoreCase(pin)) {
 				FacesMessage message = new FacesMessage(
 						"Person with this PIN already exists in database");
 				message.setSeverity(FacesMessage.SEVERITY_ERROR);

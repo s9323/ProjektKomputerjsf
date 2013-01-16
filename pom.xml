@@ -46,6 +46,13 @@
 	<!-- RichFaces Bill of Materials -->
 	<dependencyManagement>
 		<dependencies>
+		
+		<dependency>
+		 <groupId>Projekt</groupId>
+  <artifactId>Projekt</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
 			<dependency>
 				<groupId>org.richfaces</groupId>
 				<artifactId>richfaces-bom</artifactId>

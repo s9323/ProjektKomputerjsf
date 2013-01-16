@@ -6,36 +6,33 @@
 	template="/templates/default.xhtml">
 	<ui:define name="content">
 
-		<h:form id="personForm">
-            <f:event type="postValidate" listener="#{personBean.validatePinDob}" />
+		<h:form id="clientForm">
+            <f:event type="postValidate" listener="#{clientBean.validatePinDob}" />
             
 			<h:panelGrid columns="2">
 
-				<h:outputText value="#{msg.personFirstNameLabel}" />
-				<h:inputText id="firstName" value="#{personBean.person.firstName}" required="#{true}"/>
+				<h:outputText value="#{msg.clientFirstNameLabel}" />
+				<h:inputText id="firstName" value="#{clientBean.client.firstName}" required="#{true}"/>
 
-				<h:outputText value="#{msg.personPinLabel}" />
-				<h:inputText id="pin" value="#{personBean.person.pin}"
-					validator="#{personBean.uniquePin}" required="#{true}">
+				<h:outputText value="#{msg.clientPinLabel}" />
+				<h:inputText id="pin" value="#{clientBean.client.pin}"
+					validator="#{clientBean.uniquePin}" required="#{true}">
 					<f:validator validatorId="pinValidator" />
 				</h:inputText>
 
-				<h:outputText value="#{msg.personDobLabel}" />
-				<h:inputText id="dob" value="#{personBean.person.dateOfBirth}">
+				<h:outputText value="#{msg.clientDobLabel}" />
+				<h:inputText id="dob" value="#{clientBean.client.dateOfBirth}">
 				  <f:convertDateTime type="date" pattern="dd.MM.yyyy" />
 				</h:inputText>
 
-				<h:outputText value="#{msg.personZipCodeLabel}" />
-				<h:inputText id="zipCode" value="#{personBean.person.zipCode}" />
-
-				<h:outputText value="#{msg.personWeightLabel}" />
-				<h:inputText id="weight" value="#{personBean.person.weight}">
-					<f:validateDoubleRange minimum="20.5" maximum="150.5" />
+				<h:outputText value="#{msg.clientZipCodeLabel}" />
+				<h:inputText id="zipCode" value="#{clientBean.client.zipCode}" />
+				
 				</h:inputText>
 			</h:panelGrid>
 			
-			<h:commandButton value="#{msg.personFormOKButton}"
-				action="#{personBean.addPerson}" />
+			<h:commandButton value="#{msg.clientFormOKButton}"
+				action="#{clientBean.addClient}" />
 
 
 			<h:panelGrid>
