@@ -20,8 +20,8 @@ import com.example.jsfdemo.domain.Client;
 import com.example.jsfdemo.service.ClientManager;
 
 @SessionScoped
-@Named("ClientBean")
-public class PersonFormBean implements Serializable {
+@Named("clientBean")
+public class ClientFormBean implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
@@ -69,7 +69,7 @@ public class PersonFormBean implements Serializable {
 		for (Client client : cm.getAllClients()) {
 			if (client.getPin().equalsIgnoreCase(pin)) {
 				FacesMessage message = new FacesMessage(
-						"Person with this PIN already exists in database");
+						"Client with this PIN already exists in database");
 				message.setSeverity(FacesMessage.SEVERITY_ERROR);
 				throw new ValidatorException(message);
 			}
