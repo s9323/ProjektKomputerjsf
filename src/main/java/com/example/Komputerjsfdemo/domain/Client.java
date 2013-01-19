@@ -1,4 +1,4 @@
-package com.example.jsfdemo.domain;
+package com.example.Komputerjsfdemo.domain;
 
 import java.util.Date;
 

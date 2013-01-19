@@ -1,4 +1,4 @@
-package com.example.jsfdemo.web;
+package com.example.Komputerjsfdemo.web;
 
 import java.io.Serializable;
 import java.util.Calendar;
@@ -16,8 +16,8 @@ import javax.faces.validator.ValidatorException;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import com.example.jsfdemo.domain.Client;
-import com.example.jsfdemo.service.ClientManager;
+import com.example.Komputerjsfdemo.domain.Client;
+import com.example.Komputerjsfdemo.service.ClientManager;
 
 @SessionScoped
 @Named("clientBean")

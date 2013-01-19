@@ -1,11 +1,11 @@
-package com.example.jsfdemo.service;
+package com.example.Komputerjsfdemo.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.context.ApplicationScoped;
 
-import com.example.jsfdemo.domain.Client;
+import com.example.Komputerjsfdemo.domain.Client;
 
 @ApplicationScoped
 public class ClientManager {

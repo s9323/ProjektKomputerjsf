@@ -1,4 +1,4 @@
-package com.example.jsfdemo.web;
+package com.example.Komputerjsfdemo.web;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.component.UIComponent;
