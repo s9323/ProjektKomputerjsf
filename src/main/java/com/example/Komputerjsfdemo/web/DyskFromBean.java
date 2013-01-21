@@ -35,13 +35,18 @@ public class DyskFromBean implements Serializable {
 		disks.setWrappedData(dm.getAll());
 		return disks;
 	}
-//
-//	// Actions
-//	public String addDisk() {
-//		dm.save(disk);
-//		return "showDysk";
-//	}
-//
+	public String nazwa_firmy(){
+		return disk.getNazwa_firmy();
+		
+	}
+	
+
+    //Actions
+	public String addDisk() {
+	dm.save(disk);
+		return "showDysk";
+	}
+
 	public String deleteDisk() {
 		Disk diskToDelete = disks.getRowData();
 		dm.delete(diskToDelete);

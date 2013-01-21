@@ -91,7 +91,6 @@ public class DiskManager implements ManagerInterface<Disk> {
 	@Override
 	public List<Disk> getAll() {
 		List<Disk> result = new ArrayList<Disk>();
-		System.out.println("             I am here!!!            ");
 		try {
 			Class.forName("org.postgresql.Driver");
 			conn = DriverManager.getConnection(url, "postgres", "kuba22");
@@ -108,11 +107,8 @@ public class DiskManager implements ManagerInterface<Disk> {
 
 			}
 		} catch (Exception e) {
-			System.out
-					.println("                       Can touch this                    ");
 			e.printStackTrace();
 		}
-		System.out.println("              And Here!!!                   ");
 		return result;
 	}
 

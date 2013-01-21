@@ -2,13 +2,14 @@ package Komputer.JW.business;
 
 public class Disk extends Parts<Object> {
 	Computer comp;
-	private String nazwa_firmy;
-	private int ilosc;
-	private int pojemnosc;
-	private int cena;
-	private int id_dysku;
+	private String nazwa_firmy ="";
+	private int ilosc=0;
+	private int pojemnosc=0;
+	private int cena=0;
+	private int id_dysku=0;
 
 	public Disk(){
+	
 		
 	}
 	
