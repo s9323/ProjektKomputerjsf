@@ -15,8 +15,23 @@
       <h:column>
         <f:facet name="header">#{msg.dyskNameLabel}</f:facet>
         #{item.nazwa_firmy}
-      </h:column>
-      
+        </h:column>
+        
+        <h:column>
+         <f:facet name="header">#{msg.dyskHowManyLabel}</f:facet>
+        #{item.ilosc}
+        </h:column>
+        
+        <h:column>
+         <f:facet name="header">#{msg.dyskCapacityLabel}</f:facet>
+        #{item.pojemnosc}
+        </h:column>
+        
+        <h:column>
+         <f:facet name="header">#{msg.dyskPriceLabel}</f:facet>
+        #{item.cena}
+        </h:column>
+       
     
       
       <h:column>

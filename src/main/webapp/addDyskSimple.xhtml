@@ -11,6 +11,14 @@
 				<h:outputText value="#{msg.dyskNameLabel}" />
 				<h:inputText id="name" value="#{dyskBean.disk.nazwa_firmy}" />
 
+                <h:outputText value="#{msg.dyskHowManyLabel}" />
+				<h:inputText id="many" value="#{dyskBean.disk.ilosc}" />
+				
+				<h:outputText value="#{msg.dyskCapacityLabel}" />
+				<h:inputText id="capa" value="#{dyskBean.disk.pojemnosc}" />
+
+                <h:outputText value="#{msg.dyskPriceLabel}" />
+				<h:inputText id="pay" value="#{dyskBean.disk.cena}" />
 				
 			</h:panelGrid>
 
